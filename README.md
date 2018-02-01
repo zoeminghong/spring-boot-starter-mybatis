@@ -45,6 +45,31 @@ mybatis:
         default-statement-timeout: 30
 ```
 
+4. 服务
+
+```java
+@Mapper
+public interface RoleDao {
+
+    @Select("SELECT * FROM t_role WHERE id = #{id}")
+    Role findById(@Param("id") int id);
+
+    @Select("SELECT * FROM t_role")
+    List<Role> fetchRoles();
+}
+```
+
+```java
+@GetMapping
+public Resp<Page<Role>> fetchRoles() {           
+  MybatisPageContext.setPageRequest(new MybatisPageContext.PageRequest(1, 2));
+  roleDao.fetchRoles();
+  Page<Role> roleResponsePage = MybatisPageContext.getPage();
+  MybatisPageContext.clearAll();
+  return Resp.success(roleResponsePage);
+    }
+```
+
 ## 演示
 
 项目目录`example/mybatis-demo`
