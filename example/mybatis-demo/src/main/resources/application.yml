@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mybatis-demo
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+    type-aliases-package: com.zeros.demo.model
+    type-handlers-package: com.zerso.demo.typehandler
+    configuration:
+        map-underscore-to-camel-case: true
+        default-fetch-size: 100
+        default-statement-timeout: 30
