@@ -3,15 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+    </parent>
 
     <groupId>com.zerostech</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${zeros.project.version}</version>
     <description>Spring Boot with Mybatis and Page support.</description>
     <url>https://github.com/zoeminghong/spring-boot-starter-mybatis</url>
 
     <properties>
+        <zeros.project.version>0.0.5</zeros.project.version>
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -30,8 +36,8 @@
     </organization>
 
     <scm>
-        <url>https://zoeminghong@github.com/spring-boot-starter-mybatis.git</url>
-        <connection>scm:git:https://zoeminghong@github.com/spring-boot-starter-mybatis.git</connection>
+        <url>https://github.com/zoeminghong/spring-boot-starter-mybatis</url>
+        <connection>scm:git:https://github.com/zoeminghong/spring-boot-starter-mybatis.git</connection>
     </scm>
 
     <licenses>
@@ -101,19 +107,19 @@
                     <docencoding>UTF-8</docencoding>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-gpg-plugin</artifactId>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>sign-artifacts</id>-->
-                        <!--<phase>verify</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>sign</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <distributionManagement>

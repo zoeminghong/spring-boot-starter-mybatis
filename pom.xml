@@ -7,7 +7,8 @@
     <groupId>com.zerostech</groupId>
     <artifactId>build</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.0.5</version>
+    <name>Build Module</name>
 
     <modules>
         <module>parent</module>
