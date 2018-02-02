@@ -37,7 +37,7 @@
 
     <scm>
         <url>https://github.com/zoeminghong/spring-boot-starter-mybatis</url>
-        <connection>scm:git:https://github.com/zoeminghong/spring-boot-starter-mybatis.git</connection>
+        <connection>scm:git@github.com:zoeminghong/spring-boot-starter-mybatis.git</connection>
     </scm>
 
     <licenses>
@@ -124,11 +124,11 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>releases</id>
+            <id>oss</id>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots</id>
+            <id>oss</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <downloadUrl>https://oss.sonatype.org/content/groups/public</downloadUrl>
