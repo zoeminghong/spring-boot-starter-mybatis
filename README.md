@@ -1,5 +1,9 @@
 # Spring-Boot-Starter-Mybatis
 
+![https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg)
+
+![https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg)
+
 基于Spring Boot和Mybatis，添加分页相关功能，免配置即可用
 
 ## 依赖
@@ -18,7 +22,7 @@ cluster-common:1.2.2-RC
 <dependency>
     <groupId>com.zerostech</groupId>
     <artifactId>spring-boot-starter-mybatis</artifactId>
-    <version>{lastest version}</version>
+    <version>${lastest.version}</version>
 </dependency>
 ```
 
