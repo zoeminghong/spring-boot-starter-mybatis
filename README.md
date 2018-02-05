@@ -1,8 +1,6 @@
 # Spring-Boot-Starter-Mybatis
 
-![https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg)
-
-![https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg)
+[![https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg)](http://search.maven.org/#search%7Cga%7C1%7Ccom.zerostech)![https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg)
 
 基于Spring Boot和Mybatis，添加分页相关功能，免配置即可用
 
