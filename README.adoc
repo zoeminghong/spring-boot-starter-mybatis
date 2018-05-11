@@ -1,10 +1,8 @@
-# Spring-Boot-Starter-Mybatis
-
-[![https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg)](http://search.maven.org/#search%7Cga%7C1%7Ccom.zerostech) ![https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg](https://img.shields.io/github/license/zoeminghong/spring-boot-starter-mybatis.svg)
+= Spring-Boot-Starter-Mybatis
 
 基于Spring Boot和Mybatis，添加分页相关功能，免配置即可用
 
-## 依赖
+== 依赖
 
 spring boot:1.5.6
 
@@ -12,32 +10,34 @@ mybatis-spring-boot-starter:1.3.1
 
 cluster-common:1.2.2-RC
 
-## 快速开始
+== 快速开始
 
-1. 添加依赖
-
-```xml
+.添加依赖
+[source,xml]
+----
 <dependency>
     <groupId>com.zerostech</groupId>
     <artifactId>spring-boot-starter-mybatis</artifactId>
     <version>${lastest.version}</version>
 </dependency>
-```
+----
 
-2. JDBC配置
+.JDBC配置
 
-```yaml
+[source,yaml]
+----
 spring:
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql    
-```
+----
 
-3. MyBatis配置
+.MyBatis配置
 
-```yaml
+[source,yaml]
+----
 mybatis:
     type-aliases-package: com.zeros.demo.model
     type-handlers-package: com.zerso.demo.typehandler
@@ -45,11 +45,11 @@ mybatis:
         map-underscore-to-camel-case: true
         default-fetch-size: 100
         default-statement-timeout: 30
-```
+----
 
-4. 服务
-
-```java
+.服务
+[source,java]
+----
 @Mapper
 public interface RoleDao {
 
@@ -59,9 +59,10 @@ public interface RoleDao {
     @Select("SELECT * FROM t_role")
     List<Role> fetchRoles();
 }
-```
+----
 
-```java
+[source,java]
+----
 @GetMapping
 public Resp<Page<Role>> fetchRoles() {           
   MybatisPageContext.setPageRequest(new MybatisPageContext.PageRequest(1, 2));
@@ -70,14 +71,14 @@ public Resp<Page<Role>> fetchRoles() {
   MybatisPageContext.clearAll();
   return Resp.success(roleResponsePage);
 }
-```
+----
 
-## 演示
+== 演示
 
-项目目录`example/mybatis-demo`
+项目目录 `example/mybatis-demo`
 
-## 参考
+== 参考
 
-[Mybatis](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
+http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/[Mybatis]
 
-[Spring Boot Reference](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/[Spring Boot Reference]
