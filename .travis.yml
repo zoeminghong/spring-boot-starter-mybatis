@@ -3,6 +3,8 @@ script: mvn -Dmaven.test.skip=true clean package
 
 jdk:
   - oraclejdk8
+  - oraclejdk7
+  - openjdk7
 
 notifications:
   email:
