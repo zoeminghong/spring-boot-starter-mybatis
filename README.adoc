@@ -1,5 +1,10 @@
 = Spring-Boot-Starter-Mybatis
 
+image::https://img.shields.io/travis/zoeminghong/spring-boot-starter-mybatis.svg[link="https://travis-ci.org/zoeminghong/spring-boot-starter-mybatis"]
+image::https://img.shields.io/github/release/zoeminghong/spring-boot-starter-mybatis.svg[link="https://travis-ci.org/zoeminghong/spring-boot-starter-mybatis"]
+image::https://img.shields.io/badge/language-java-green.svg[link="https://travis-ci.org/zoeminghong/spring-boot-starter-mybatis"]
+
+
 基于Spring Boot和Mybatis，添加分页相关功能，免配置即可用
 
 == 依赖
